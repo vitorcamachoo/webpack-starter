@@ -24,18 +24,23 @@ module.exports = {
 	output: {
 		path: DIST_DIR,
 		publicPath: "/",
-		contentBase: DIST_DIR,
 		filename: '[name].js',
 	},
 
 	module: {
-		loaders: [
-			{ test: /\.js?$/, loader: 'babel-loader', exclude: /node_modules/ },
-			{ test: /\.css$/, loader: ExtractTextPlugin.extract("style-loader", "css-loader") }
+		rules: [
+			{ test: /\.js$/, loader: 'babel-loader', exclude: /node_modules/ },
+			{ test: /\.css$/, loader: ExtractTextPlugin.extract({ fallback: "style-loader", use: "css-loader" })},
 		],
-		resolve: {
-			extensions: ['.js', '.jsx']
-		}
+	},
+
+	resolve: {
+		extensions: ['.js', '.jsx', '.json', '.css'],
+	},
+
+	devServer: {
+		contentBase: DIST_DIR,
+		historyApiFallback: true,
 	},
 
 	plugins,
