@@ -1,4 +1,4 @@
-# Webpack-starter [![Build Status](https://travis-ci.org/vitorcamachoo/es6-webpack-starter.svg?branch=master)](https://travis-ci.org/vitorcamachoo/es6-webpack-starter)
+# Webpack-settings [![Build Status](https://travis-ci.org/vitorcamachoo/webpack-settings.svg?branch=master)](https://travis-ci.org/vitorcamachoo/webpack-settings)
 
 Create applications using webpack with minimum configuration.
 
@@ -8,11 +8,11 @@ This module has been created to remove some complexity and "re-configuration" wh
 ## Installation
 - Install module
 ```sh
-npm install -D webpack-starter
+npm install -D webpack-settings
 ```
 - Create `webpack.config.js` in your project
 ```
-import { setup } from 'webpack-starter'
+import { setup } from 'webpack-settings'
 
 module.exports = setup();
 ```
@@ -43,7 +43,7 @@ Example:
 **Simple usage**  
 *webpack.config.js*
 ```js
-import { setup } from 'webpack-starter'
+import { setup } from 'webpack-settings'
 
 module.exports = setup();
 ```
@@ -53,7 +53,7 @@ module.exports = setup();
 ```js
 import path from 'path'
 import webpack from 'webpack'
-import { setup } from 'webpack-starter'
+import { setup } from 'webpack-settings'
 const BASEDIR = process.cwd()
 
 module.exports = setup({
