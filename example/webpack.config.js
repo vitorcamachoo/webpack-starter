@@ -1,4 +1,4 @@
-const { config, plugins, utils } = require('../index');
+const { setup, plugins, utils } = require('../index');
 const path = require('path')
 
-module.exports = config();
+module.exports = setup();
