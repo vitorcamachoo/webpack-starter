@@ -1,6 +1,6 @@
 {
-  "name": "es6-webpack-starter",
-  "version": "1.0.0",
+  "name": "webpack-es6-starter",
+  "version": "0.0.1",
   "description": "Example of webpack with es6 loader",
   "main": "index.js",
   "author": "vitorcamachoo",

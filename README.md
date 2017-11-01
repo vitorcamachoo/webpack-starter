@@ -114,5 +114,6 @@ By default, the main configuration are using these plugins by default. This can 
 
 
 ## Todo List
+- Add tests
 - Allow to pass loaders through setup
 - Allow to pass webpack-dev-server object configuration
