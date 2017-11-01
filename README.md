@@ -1,13 +1,72 @@
-[![Build Status](https://travis-ci.org/vitorcamachoo/es6-webpack-starter.svg?branch=master)](https://travis-ci.org/vitorcamachoo/es6-webpack-starter)
+# Webpack-starter [![Build Status](https://travis-ci.org/vitorcamachoo/es6-webpack-starter.svg?branch=master)](https://travis-ci.org/vitorcamachoo/es6-webpack-starter)
 
-A booster to who wants build a project using webpack and es6 features
+Create applications using webpack with minimum configuration.
+
+# Why Use This?
+This module has been created to remove some complexity and "re-configuration" when you want to develop a new application using webpack features. At the same time, it allow you to expand or override the default configurations as you need.   
+
+## Installation
+```sh
+npm install -D webpack-starter
+
+wbs --help
+```
+
+# What’s Inside?
+* utilities
+* webpack configuration
+  * `Setup`
+  * `Utils`
+  * `Plugins`
+* webpack-dev-server configuration
+* html-webpack-plugin
+* extract-text-plugin
+* Babel using the latest ES6 features
 
 This will export as npm module the following:
-* `Config`
+* `Setup`
 * `Utils`
 * `Plugins`
   
-### Config
+### Setup
+The provided setup allow to define the default properties present on the library, namely, `paths` and `plugins`.
+To know what each property can receive, check their topic.
+
+Example:
+
+**Simple usage**
+*webpack.config.js*
+```js
+import { setup } from 'webpack-starter'
+
+module.exports = setup();
+```
+
+**Advanced usage**
+*webpack.config.js*
+```js
+import path from 'path'
+import webpack from 'webpack'
+import { setup } from 'webpack-starter'
+const BASEDIR = process.cwd()
+
+module.exports = setup({
+  paths: {
+    ENTRY_POINT: {
+      application: path.resolve(BASEDIR, 'src/application')
+      backoffice: path.resolve(BASEDIR, 'src/backoffice'),
+    },
+  },
+  plugins: {
+    production: [
+      new webpack.optimize.UglifyJsPlugin({
+        compress: { warnings: false },
+      }),
+    ]
+  },
+});
+```
+
 
 ### Utils
 The module is composed by a set of utilities, namely for paths and flags.
@@ -21,8 +80,15 @@ If you need to extend or override some configuration, these flags can be usefull
 
 ##### Paths
 For the paths, the following paths variables are beeing exported:
-* DEV_DIR => /src
-* DIST_DIR => /dist
+* PUBLIC_DIR => /
+* DEV_DIR => [EXECUTION_PATH]/src
+* DIST_DIR => [EXECUTION_PATH]/dist
+* ENTRYPOINT => Use for entry property in webpack.config.js. With this approach, it can allow to have a single or multiple entrypoints
+```
+{
+  app: path.resolve(BASEDIR, 'src/app')
+}
+```
 
 *Note*: These can be changed when initializing configuration file
 
