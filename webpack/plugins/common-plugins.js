@@ -1,5 +1,5 @@
 // Helpers
-const { flags } = require('../utils');
+const { flags } = require('../../utils');
 const { IS_DEV, IS_PROD } = flags;
 
 // Webpack plugins
