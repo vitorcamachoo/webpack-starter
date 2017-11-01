@@ -18,9 +18,7 @@ module.exports = (config = {}) => {
     cache: IS_DEV,
     watch: IS_WATCH,
     devtool: IS_DEV ? 'source-map' : false,
-    entry: {
-      app: ENTRY_POINT,
-    },
+    entry: ENTRY_POINT,
   
     output: {
       path: DIST_DIR,
@@ -30,7 +28,7 @@ module.exports = (config = {}) => {
   
     module: {
       rules: [
-        { test: /\.js$/, loader: 'babel-loader', exclude: /node_modules/ },
+        { test: /\.js$/, loader: 'babel-loader', exclude: /node_modules/, options: { "presets": ["env"] } },
         { test: /\.css$/, loader: ExtractTextPlugin.extract({ fallback: "style-loader", use: "css-loader" })},
       ],
     },
