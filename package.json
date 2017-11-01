@@ -1,5 +1,5 @@
 {
-  "name": "webpack-es6-starter",
+  "name": "webpack-settings",
   "version": "0.0.1",
   "description": "Example of webpack with es6 loader",
   "main": "index.js",
