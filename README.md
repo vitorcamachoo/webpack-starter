@@ -6,11 +6,17 @@ Create applications using webpack with minimum configuration.
 This module has been created to remove some complexity and "re-configuration" when you want to develop a new application using webpack features. At the same time, it allow you to expand or override the default configurations as you need.   
 
 ## Installation
+- Install module
 ```sh
 npm install -D webpack-starter
-
-wbs --help
 ```
+- Create `webpack.config.js` in your project
+```
+import { setup } from 'webpack-starter'
+
+module.exports = setup();
+```
+
 
 # What’s Inside?
 * utilities
@@ -34,7 +40,7 @@ To know what each property can receive, check their topic.
 
 Example:
 
-**Simple usage**
+**Simple usage**  
 *webpack.config.js*
 ```js
 import { setup } from 'webpack-starter'
@@ -42,7 +48,7 @@ import { setup } from 'webpack-starter'
 module.exports = setup();
 ```
 
-**Advanced usage**
+**Advanced usage**  
 *webpack.config.js*
 ```js
 import path from 'path'
@@ -101,7 +107,12 @@ By default, the main configuration are using these plugins by default. This can 
 * [HtmlWebpackPlugin](https://github.com/jantimon/html-webpack-plugin)
 
 ##### Development
-* empty
-
+* <empty>
+ 
 ##### Production
 * native UglifyJsPlugin
+
+
+## Todo List
+- Allow to pass loaders through setup
+- Allow to pass webpack-dev-server object configuration
