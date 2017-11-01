@@ -12,14 +12,14 @@ This will export as npm module the following:
 ### Utils
 The module is composed by a set of utilities, namely for paths and flags.
 
-Flags
+##### Flags
 If you need to extend or override some configuration, these flags can be usefull. The flags that are beeing exported are:
 * IS_DEV
 * IS_PROD
 * IS_WATCH
 * IS_TEST
 
-#### Paths
+##### Paths
 For the paths, the following paths variables are beeing exported:
 * DEV_DIR => /src
 * DIST_DIR => /dist
@@ -30,16 +30,12 @@ For the paths, the following paths variables are beeing exported:
 These are exporting three groups of plugins, `development`, for `development` and for `production`
 By default, the main configuration are using these plugins by default. This can be usefull if you want to extend any of them and inject them into the main configuration.
 
-#### Development
+##### Common
 * [ExtractTextPlugin](https://github.com/webpack-contrib/extract-text-webpack-plugin)
 * [HtmlWebpackPlugin](https://github.com/jantimon/html-webpack-plugin)
-```js
-import { flags, paths, plugins } from 'webpack-starter/utils'
 
-// *Flags* are exporting the following booleans
-// IS_DEV, IS_PROD, IS_WATCH
-// This could be usefull when extending the common webpack config file
+##### Development
+* empty
 
-// *paths* are exporting the following directories
-// DEV_DIR => /src
-// DIST_DIR => /dist
+##### Production
+* native UglifyJsPlugin
