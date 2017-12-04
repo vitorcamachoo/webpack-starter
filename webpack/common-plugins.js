@@ -14,6 +14,7 @@ const { IS_DEV, IS_PROD } = flags;
 module.exports = [
 	new webpack.DefinePlugin({
 		'process.env': {
+			VERSION: JSON.stringify(require('../package.json').version),
 			NODE_ENV: JSON.stringify(IS_PROD ? 'production' : 'development')
 		},
 	}),
