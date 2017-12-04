@@ -1,9 +1,9 @@
 const path = require('path');
-const BASEDIR = process.cwd();
+const BASE_DIR = process.cwd();
 
 module.exports = {
-	BASEDIR,
-	DEV_DIR: path.resolve(BASEDIR, 'src'),
-	DIST_DIR: path.resolve(BASEDIR, 'dist'),
+	BASE_DIR,
+	DEV_DIR: path.resolve(BASE_DIR, 'src'),
+	DIST_DIR: path.resolve(BASE_DIR, 'dist'),
 	PUBLIC_DIR: '/',
 };

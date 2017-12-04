@@ -3,15 +3,19 @@ const webpack = require('webpack');
 
 // Webpack plugins
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const CleanWebpackPlugin = require('clean-webpack-plugin');
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
 
 // Helpers
 const { flags, paths } = require('../utils');
 
-const { DEV_DIR } = paths;
+const { BASE_DIR, DEV_DIR, DIST_DIR } = paths;
 const { IS_DEV, IS_PROD } = flags;
 
 module.exports = [
+	new CleanWebpackPlugin([DIST_DIR], {
+		root: BASE_DIR,
+	}),
 	new webpack.DefinePlugin({
 		'process.env': {
 			VERSION: JSON.stringify(require('../package.json').version),

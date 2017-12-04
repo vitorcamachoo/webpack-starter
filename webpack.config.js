@@ -9,7 +9,7 @@ const { paths, flags} = require('./utils');
 const plugins = require('./webpack');
 
 const { IS_DEV, IS_PROD, IS_WATCH } = flags;
-const { BASEDIR, DEV_DIR, DIST_DIR, PUBLIC_DIR, ENTRY_POINT } = paths;
+const { BASE_DIR, DEV_DIR, DIST_DIR, PUBLIC_DIR, ENTRY_POINT } = paths;
 const { common, development, production } = plugins;
 
 module.exports = (env) => {
@@ -19,7 +19,7 @@ module.exports = (env) => {
     watch: IS_WATCH,
     devtool: IS_DEV ? 'source-map' : false,
     entry: {
-      app: path.resolve(BASEDIR, 'src/index'),
+      app: path.resolve(BASE_DIR, 'src/index'),
     },
   
     output: {
