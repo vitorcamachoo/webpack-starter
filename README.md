@@ -1,4 +1,8 @@
-# Webpack-starter [![Build Status](https://travis-ci.org/vitorcamachoo/webpack-starter.svg?branch=master)](https://travis-ci.org/vitorcamachoo/webpack-starter)
+[![Build Status](https://travis-ci.org/vitorcamachoo/webpack-starter.svg?branch=master)](https://travis-ci.org/vitorcamachoo/webpack-starter)
+[![Greenkeeper badge](https://badges.greenkeeper.io/ForbesLindesay/uglify-to-browserify.svg)](https://greenkeeper.io/)
+[![Known Vulnerabilities](https://snyk.io/test/github/vitorcamachoo/webpack-starter/badge.svg)](https://snyk.io/test/github/vitorcamachoo/webpack-starter)
+
+# Webpack-starter 
 
 A very simple project starter with webpack composed with the latest features
  
