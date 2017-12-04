@@ -1,6 +1,6 @@
 {
   "name": "webpack-settings",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Example of webpack with es6 loader",
   "main": "index.js",
   "author": "vitorcamachoo",
