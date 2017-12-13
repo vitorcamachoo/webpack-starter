@@ -1,14 +1,14 @@
 {
   "name": "webpack-settings",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Example of webpack with es6 loader",
   "main": "index.js",
   "author": "vitorcamachoo",
   "license": "MIT",
   "scripts": {
-    "start": "npm run server",
-    "build": "cd example && webpack",
-    "server": "cd example && webpack-dev-server --hot --inline --open"
+    "start": "webpack-dev-server --hot --inline --open",
+    "build:dev": "webpack --env.dev",
+    "build:prod": "webpack --env.prod"
   },
   "engine": {
     "node": ">=6.0.0"
@@ -17,15 +17,18 @@
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.2",
+    "babel-polyfill": "^6.26.0",
     "babel-preset-env": "^1.6.0",
+    "clean-webpack-plugin": "^0.1.17",
     "css-loader": "^0.28.7",
     "extract-text-webpack-plugin": "^3.0.1",
     "html-webpack-plugin": "^2.30.1",
+    "sass-loader": "^6.0.6",
+    "scss-loader": "^0.0.1",
     "style-loader": "^0.19.0",
-    "webpack-merge": "^4.1.1"
-  },
-  "peerDependencies": {
+    "webpack-merge": "^4.1.1",
+    "node-sass": "^4.7.2",
     "webpack": "^3.6.0",
-    "webpack-dev-server": "^2.9.1"
+    "webpack-dev-server": "^2.9.5"
   }
 }
