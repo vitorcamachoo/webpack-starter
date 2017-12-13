@@ -8,9 +8,7 @@
   "scripts": {
     "start": "webpack-dev-server --hot --inline --open",
     "build:dev": "webpack --env.dev",
-    "build:prod": "webpack --env.prod",
-    "snyk-protect": "snyk protect",
-    "prepublish": "npm run snyk-protect"
+    "build:prod": "webpack --env.prod"
   },
   "engine": {
     "node": ">=6.0.0"
