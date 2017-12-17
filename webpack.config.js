@@ -19,7 +19,7 @@ module.exports = (env) => {
     watch: IS_WATCH,
     devtool: IS_DEV ? 'source-map' : false,
     entry: {
-      app: path.resolve(BASE_DIR, 'src/index'),
+      app: [path.resolve(BASE_DIR, 'src/index')],
     },
   
     output: {
