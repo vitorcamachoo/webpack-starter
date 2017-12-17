@@ -10,9 +10,6 @@ before_install:
 install:
   - yarn
 
-before_script:
-- npm install --verbose
-
 script:
 - npm run build:dev
 - npm run build:prod
